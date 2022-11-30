@@ -31,6 +31,14 @@ function App() {
                 </Routes>
             </div>
         </Router>
+        // <div>
+        //     <Navbar/>
+        //     <div className='grid grid-cols-3 bg-slate-700 h-screen-navbar-player'>
+        //         <DetailSong/>
+        //         <ListSong/>
+        //     </div>
+
+        // </div>
     );
 }
 

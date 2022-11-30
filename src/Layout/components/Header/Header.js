@@ -1,7 +1,7 @@
 function Header() {
-    return ( 
-        <h1>Đây là Header</h1>
-     );
+    return (
+        <div className="h-16  bg-color_header text-white text-center leading-[6rem] text-3xl"></div>
+    );
 }
 
 export default Header;

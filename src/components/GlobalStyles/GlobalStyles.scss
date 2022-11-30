@@ -5,12 +5,13 @@
 @tailwind utilities;
 
 @layer base {
-    h3 {
-        @apply text-3xl;
-    }
-    h4 {
-        @apply text-2xl;
-    }
+    
+    // h3 {
+    //     @apply text-3xl;
+    // }
+    // h4 {
+    //     @apply text-2xl;
+    // }
 }
 
 @layer components {
@@ -30,14 +31,13 @@
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-horizontal-spacer: 24px;
-
     --font-family: 'Inter', sans-serif;
 }
 body {
     font-family: var(--font-family);
 }
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    
+
 }
