@@ -1,7 +1,7 @@
 function Library() {
     return (
-        <div>
-            <h3>Đây là trang Library</h3>
+        <div className="grid grid-cols-2 bg-primary h-screen-navbar-player-mobile overflow-hidden md:h-screen-navbar-player">
+            <h1 className="text-white">Chức năng này hiện chưa cập nhật</h1>
         </div>
     );
 }

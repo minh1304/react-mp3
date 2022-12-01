@@ -4,7 +4,8 @@ module.exports = {
     theme: {
         extend: {
             height: {
-                'screen-navbar-player': 'calc(100vh - 6rem - 4rem )',
+                'screen-navbar-player-mobile': 'calc(100vh - 6rem - 6rem )',
+                'screen-navbar-player': 'calc(100vh - 6rem - 57px )',
                 'screen-side-player': 'calc(100vh - 6rem)',
             },
             backgroundImage: {

@@ -3,7 +3,7 @@ import { DataMusics } from '~/App';
 function DetailSong() {
     const { song } = useContext(DataMusics);
     return (
-        <div className="col-span-1 p-14">
+        <div className="md:col-span-1 p-14">
             <h2 className="text-white font-bold">Now playing </h2>
             <h2 className="text-neutral-400 text-2xl min-h-[65px]">
                 {song.name}

@@ -22,7 +22,7 @@
         @apply text-white bg-hover_color cursor-pointer;
     }
     .noneHover {
-        @apply bg-white  text-black
+        @apply bg-slate-50 text-black
     }
     .player-music {
         @apply bg-color_player_music h-full box-border;
@@ -46,7 +46,7 @@ body {
     font-family: var(--font-family);
 }
 * {
-    overflow: hidden;
+    // overflow: hidden;
     box-sizing: border-box;
 }
 

@@ -4,14 +4,14 @@ import Playing from '../components/Playing';
 function DefaultLayout({ children }) {
     return (
         <div>
-            <div className="w-[100%] flex ">
+            <div className="grid md:grid-cols-7">
                 <Sidebar />
-                <div className="w-[100%] ">
+                <div className="md:col-span-6">
                     <Header />
                     <div>{children}</div>
                 </div>
             </div>
-            <div>
+            <div className='w-[100%]'>
                 <Playing />
             </div>
         </div>

@@ -3,95 +3,75 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons';
 
-import {
-    HomeIcon,
-    HomeIconActive,
-    LibraryActive,
-    Search,
-    SearchActive,
-} from '~/components/Icons';
+import { HomeIcon, LibraryActive, Search } from '~/components/Icons';
 import Menu, { MenuItem } from './Menu';
+import { useState } from 'react';
+import { faBars, faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
 
 // import { HomeIcon } from '~/components/Icons';
 function Sidebar() {
+    const [isNavMenuMobileOpen, setIsNavMenuMobileOpen] = useState(false);
+    const handleOpenMenu = () => {
+        if (!isNavMenuMobileOpen) {
+            setIsNavMenuMobileOpen(true);
+        } else {
+            setIsNavMenuMobileOpen(false);
+        }
+    };
     return (
-        <aside className="w-[241px] min-w-[200px] z-10 bg-black h-screen-side-player ">
-            <div className="grid grid-cols-2 w-full">
-                <div className="col-span-1 text-white p-8 w-[260px] h-screen  ">
-                    <div>
+        <aside className="h-[100px] md:h-full md:col-span-1 z-[100] bg-black ">
+            <div className="w-full">
+                <div className="grid grid-cols-2 md:block text-white p-8">
+                    <div className="col-span-1">
                         <Link
                             to={config.routes.home}
-                            className="flex items-center text-3xl"
+                            className="items-center text-3xl md: flex"
                         >
                             <FontAwesomeIcon
                                 className="text-5xl"
                                 icon={faSpotify}
                             />
-                            <span className="font-semibold text-3xl pl-2">Spotify</span>
+                            <span className="font-semibold text-3xl pl-2">
+                                Spotify
+                            </span>
                         </Link>
                     </div>
-                    <div className="pt-5 font-semibold mt-5">
-                        {/* active */}
-                        {/* <div>
-                            <Link
-                                className="flex items-center"
-                                to={config.routes.home}
-                            >
-                                <HomeIconActive
-                                    className={'text-white mb-[2px]'}
-                                />
-                                <span className="pl-5">Home</span>
-                            </Link>
+                    <div className="col-span-1">
+                        <div
+                            className="block ml-[170px] mt-5 md:hidden"
+                            onClick={handleOpenMenu}
+                        >
+                            <FontAwesomeIcon
+                                className="text-3xl"
+                                icon={faEllipsisVertical}
+                            />
                         </div>
-                        <div className="mt-3 flex items-center">
-                            <Link
-                                className="flex items-center"
-                                to={config.routes.search}
-                            >
-                                <SearchActive
-                                    className={'text-white mb-[2px]'}
+                        <div
+                            className={`${
+                                isNavMenuMobileOpen ? ' ' : 'hidden'
+                            } rounded-2xl p-3 bg-black  md:border-none  md:block md:ml-[1px] pt-5 font-semibold mt-5`}
+                        >
+                            <Menu>
+                                <MenuItem
+                                    to={config.routes.home}
+                                    title="Home"
+                                    icon={<HomeIcon />}
                                 />
-                                <span className="pl-5">Search</span>
-                            </Link>
+                                <MenuItem
+                                    to={config.routes.search}
+                                    title="Search"
+                                    icon={<Search />}
+                                />
+                                <MenuItem
+                                    to={config.routes.library}
+                                    title="Your Library"
+                                    icon={<LibraryActive />}
+                                />
+                            </Menu>
                         </div>
-                        <div className="mt-3 flex items-center">
-                            <Link
-                                className="flex items-center"
-                                to={config.routes.library}
-                            >
-                                <LibraryActive
-                                    className={'text-white mb-[2px]'}
-                                />
-                                <span className="pl-5">Your Library</span>
-                            </Link>
-                        </div> */}
-
-                        <Menu>
-                            <MenuItem
-                                to= {config.routes.home}
-                                title = "Home"
-                                icon = {<HomeIcon/>}
-                                // activeIcon = {<HomeIconActive className={'text-white mb-[2px]'}/>}
-                                
-                            />
-                            <MenuItem
-                                to= {config.routes.search}
-                                title = "Search"
-                                icon = {<Search/>}
-                                // activeIcon = {<SearchActive className={'text-white mb-[2px]'}/>}
-                                
-                            />
-                            <MenuItem
-                                to= {config.routes.library}
-                                title = "Your Library"
-                                icon = {<LibraryActive/>}
-                                // activeIcon = {<LibraryActive className={'text-white mb-[2px]'}/>}
-                                
-                            />
-                        </Menu>
                     </div>
                 </div>
-                <div className="col-span-1 w-[0px]"></div>
+                {/* <div className="col-span-1 w-[0px]"></div> */}
             </div>
         </aside>
     );

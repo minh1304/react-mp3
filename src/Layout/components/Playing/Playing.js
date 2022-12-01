@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import { DataMusics } from '~/App';
+
 function Playing() {
     const { song, handleSetSong  } = useContext(DataMusics);
     const handleNext = () => {
@@ -16,7 +17,7 @@ function Playing() {
     }
 
     return (
-        <div className="border-t border-hover_color h-[100px] box-border">
+        <div className="border-t border-hover_color">
             <AudioPlayer
                 className="player-music"
                 src={song.url}
@@ -26,6 +27,7 @@ function Playing() {
                 onClickPrevious={handlePrevious}
                 onEnded={handelEnd}
             />
+
         </div>
     );
 }
