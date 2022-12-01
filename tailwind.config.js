@@ -4,7 +4,8 @@ module.exports = {
     theme: {
         extend: {
             height: {
-                'screen-navbar-player': 'calc(100vh - 6rem - 3rem )',
+                'screen-navbar-player': 'calc(100vh - 6rem - 4rem )',
+                'screen-side-player': 'calc(100vh - 6rem)',
             },
             backgroundImage: {
                 'hero-pattern':
@@ -14,7 +15,10 @@ module.exports = {
                 Inter: ['Inter', 'sans-serif'],
             },
             colors: {
-                color_header: '#3f1012',
+                color_header: '#1a1a1a',
+                decorative: '#b3b3b3',
+                hover_color: '#2c2c2c',
+                color_player_music: '#181818',
                 primary: '#121212',
                 secondary: '##ffffff80',
                 queue_player_popup: '#5d218c',

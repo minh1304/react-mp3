@@ -18,6 +18,15 @@
     .btn {
         @apply border-2 border-primary px-4 py-2 rounded bg-white hover:bg-slate-500;
     }
+    .hover {
+        @apply text-white bg-hover_color cursor-pointer;
+    }
+    .noneHover {
+        @apply bg-white  text-black
+    }
+    .player-music {
+        @apply bg-color_player_music h-full box-border;
+    }
 }
 
 :root {
@@ -37,7 +46,22 @@ body {
     font-family: var(--font-family);
 }
 * {
+    overflow: hidden;
     box-sizing: border-box;
-    
+}
 
+// Scroll bar
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(44, 44, 44, 1);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
 }
