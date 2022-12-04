@@ -7,6 +7,7 @@ function Home() {
         <div className="grid md:grid-cols-3 bg-primary h-screen-navbar-player-mobile overflow-hidden md:h-screen-navbar-player">
             <DetailSong/>
             <ListSong/>
+            <h2>ahihi</h2>
         </div>
     );
 }
