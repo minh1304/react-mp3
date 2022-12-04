@@ -1,4 +1,4 @@
--# Build MusicPlayer with React JS + Tailwind CSS
+# Build MusicPlayer with React JS + Tailwind CSS
 
 ## Live: https://react-mp3.vercel.app/
 ## Full Screen
